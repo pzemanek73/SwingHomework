@@ -15,8 +15,7 @@ public class MainApp {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+		EventQueue.invokeLater(() -> {
 				try {
 					MainFrame frame = new MainFrame();
 					frame.setVisible(true);
@@ -24,7 +23,7 @@ public class MainApp {
 					e.printStackTrace();
 				}
 			}
-		});
+		);
 	}
 
 }
