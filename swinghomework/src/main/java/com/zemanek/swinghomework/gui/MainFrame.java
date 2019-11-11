@@ -86,9 +86,15 @@ public class MainFrame extends JFrame {
 			urlText = "http://" + urlText;
 		}
 
-		TableRow res = bl.openURL(urlText);		
-		tblModel.addRow(res);
-		tblModel.fireTableDataChanged();
+		// Run openURL in a thread for the GUI to remain responsive
+		final String ut = urlText; 
+		Thread t = new Thread(() -> { 
+			TableRow res = bl.openURL(ut);		
+			tblModel.addRow(res);
+			tblModel.fireTableDataChanged();
+		});
+		t.start();
+		
 	}
 
 }

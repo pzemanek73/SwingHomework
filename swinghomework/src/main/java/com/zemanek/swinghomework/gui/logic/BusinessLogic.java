@@ -22,6 +22,7 @@ public class BusinessLogic {
 		try {
 			url = new URL(urlText);
 			conn = (HttpURLConnection) url.openConnection();
+			conn.setConnectTimeout(5000);
 			//conn.setRequestMethod("HEAD");
 
 			ret.setUrl(urlText);

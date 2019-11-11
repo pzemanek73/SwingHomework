@@ -6,6 +6,7 @@ import com.zemanek.swinghomework.gui.MainFrame;
 
 /**
  * Main class to run the app
+ * 
  * @author Petr Zemanek
  *
  */
@@ -16,14 +17,13 @@ public class MainApp {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(() -> {
-				try {
-					MainFrame frame = new MainFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+			try {
+				MainFrame frame = new MainFrame();
+				frame.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		);
+		});
 	}
 
 }
