@@ -81,7 +81,7 @@ public class TableModel extends AbstractTableModel {
 	 * 
 	 * @param row
 	 */
-	public void addRow(TableRow row) {
+	synchronized public void addRow(TableRow row) {
 		data.add(row);
 	}
 
